@@ -11,8 +11,8 @@ import (
 
 func TestCreateNewUserRole(t *testing.T) {
 	var userdata User
-	userdata.Username = "edumas123"
-	userdata.Password = "edumas321"
+	userdata.Username = "edumasser"
+	userdata.Password = "edumasser"
 	userdata.Role = "user"
 	mconn := SetConnection("MONGOSTRING", "edumasapk")
 	CreateNewUserRole(mconn, "user", userdata)
@@ -28,7 +28,7 @@ func TestDeleteUser(t *testing.T) {
 //user
 func CreateNewUserToken(t *testing.T) {
 	var userdata User
-	userdata.Username = "edumas123"
+	userdata.Username = "user123"
 	userdata.Password = "mantap"
 	userdata.Role = "user"
 
@@ -47,7 +47,7 @@ func CreateNewUserToken(t *testing.T) {
 func TestGFCPostHandlerUser(t *testing.T) {
 	mconn := SetConnection("MONGOSTRING", "edumasapk")
 	var userdata User
-	userdata.Username = "edumas123"
+	userdata.Username = "ser123"
 	userdata.Password = "mantap"
 	userdata.Role = "user"
 	CreateNewUserRole(mconn, "user", userdata)
@@ -57,9 +57,9 @@ func TestReport(t *testing.T) {
 	mconn := SetConnection("MONGOSTRING", "edumasapk")
 	var reportdata Report
 	reportdata.Nik = 12121
-	reportdata.Title = "Jalan Rusak"
-	reportdata.Description = "Di sarijadi ada jalan bolong rusak"
-	reportdata.DateOccurred = "18112002"
+	reportdata.Title = "Jalan Rusak Berlubang"
+	reportdata.Description = "Di sariasih ada jalan bolong rusak"
+	reportdata.DateOccurred = "18112024"
 	reportdata.Image = "https://images3.alphacoders.com/165/thumb-1920-165265.jpg"
 	CreateNewReport(mconn, "report", reportdata)
 }
